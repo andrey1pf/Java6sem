@@ -1,0 +1,8 @@
+com.example.lab2.Config
+com.example.lab2.Config.Connection
+com.example.lab2.Config.Controller
+com.example.lab2.Config.DAOs
+com.example.lab2.Config.Entities
+com.example.lab2.Config.Exceptions
+com.example.lab2.Config.Schemes
+com.example.lab2.Config.Settings
