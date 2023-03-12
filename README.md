@@ -6,6 +6,9 @@ REPO for java labs Variant 6
 # Лабораторная работа №2
 [Condition](https://github.com/andrey1pf/Java6sem/blob/main/Conditions/%D0%9B%D0%B0%D0%B12.doc)
 
+# Лабораторная работа №3
+[Condition](https://github.com/andrey1pf/Java6sem/blob/main/Conditions/%D0%9B%D0%B0%D0%B13_JS.doc)
+
 # Branches
 main: all lab work so far
 
