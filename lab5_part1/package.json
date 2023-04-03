@@ -1,0 +1,20 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "description": "My awesome project",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "dev": "webpack-dev-server --mode development"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "rxjs": "^7.4.0"
+    },
+    "devDependencies": {
+      "webpack": "^5.62.2",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.3.1"
+    }
+  }
+  

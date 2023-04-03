@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="TLocalStorage.js" defer></script>
+    <script type="text/javascript" src="LocalFunctions.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="types">
+    <form action="#" id="main-form">
+        <label for="id">ID:</label><input id="id" type="text"><br>
+        <label for="id_customer">ID Customer:</label><input id="id_customer" type="text"><br>
+        <label for="id_task">ID Task:</label><input id="id_task" type="text"><br>
+        <label for="price">Price:</label><input id="price" type="text"><br>
+        <label for="paid">Paid:<input id="paid" type="checkbox"><br></label>
+        <input type="submit" onclick="ordersTable.addValue()" value="addToBase">
+    </form>
+    <form action="#" id="info-form">
+        <label for="info">Get information about orders:</label><input id="info" type="text"><br>
+        <input type="submit" onclick="ordersTable.getValue()" value="getInfo">
+        <div id="text-info"></div>
+    </form>
+    <form action="#" id="delete-form">
+        <label for="delete">Delete orders information:</label><input id="delete" type="text"><br>
+        <input type="submit" onclick="ordersTable.deleteValue()" value="deleteOrder">
+    </form>
+    <form action="#" id="list-form">
+        <div>List of all orders:</div>
+        <input type="submit" onclick="ordersTable.getKeys()" value="Show">
+        <div id="list-orders"></div>
+    </form>
+</div>
+</body>
+</html>

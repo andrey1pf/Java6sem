@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "id_customer": 2,
+    "id_task": 2,
+    "price": 100,
+    "paid": "yes"
+  },
+  {
+    "id": 2,
+    "id_customer": 2,
+    "id_task": 3,
+    "price": 200,
+    "paid": "no"
+  }
+]
+  
