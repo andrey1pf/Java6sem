@@ -1,0 +1,37 @@
+[
+    {
+        "serviceID": 1,
+        "workType": 1,
+        "workDescription": "zamena bampera",
+        "isExpired": "True",
+        "dispatcherID": 1
+    },
+    {
+        "serviceID": 2,
+        "workType": 1,
+        "workDescription": "zamena bampera",
+        "isExpired": "False",
+        "dispatcherID": 1
+    },
+    {
+        "serviceID": 3,
+        "workType": 2,
+        "workDescription": "perekraska dveri",
+        "isExpired": "True",
+        "dispatcherID": 1
+    },
+    {
+        "serviceID": 4,
+        "workType": 3,
+        "workDescription": "himchestka",
+        "isExpired": "True",
+        "dispatcherID": 1
+    },
+    {
+        "serviceID": 4,
+        "workType": 3,
+        "workDescription": "himchestka",
+        "isExpired": "True",
+        "dispatcherID": 1
+    }
+]
