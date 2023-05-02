@@ -4,6 +4,7 @@ import { ProjectCenterComponent } from './project-center/project-center.componen
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AppRoutingModule } from './design-routing.module';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { AppRoutingModule } from './design-routing.module';
     ProjectListComponent,
     ProjectDetailsComponent
   ],
-  imports: [
-    CommonModule,
-    AppRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ]
 })
 export class DesignModule { }

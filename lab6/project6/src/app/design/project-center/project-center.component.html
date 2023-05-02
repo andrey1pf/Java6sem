@@ -1,3 +1,25 @@
+<form [formGroup]="projectForm!" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <label for="projectName">Project ID:</label>
+    <input type="text" id="projectName" class="form-control" formControlName="name">
+  </div>
+  <div class="container">
+    <label for="projectDescription">Project Description:</label>
+    <textarea id="projectDescription" class="form-control" formControlName="description"></textarea>
+  </div>
+  <div class="container">
+    <label for="customerName">Customer:</label>
+    <input type="text" id="customerName" class="form-control" formControlName="customer">
+  </div>
+  <div class="container">
+    <label for="projectPrice">Price:</label>
+    <input type="number" id="projectPrice" class="form-control" formControlName="price">
+  </div>
+  <div class="container">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
 <h1>Project Center</h1>
 <a routerLink="/">Project List</a>
 <router-outlet></router-outlet>
