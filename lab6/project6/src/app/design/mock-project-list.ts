@@ -1,4 +1,4 @@
-import { Project } from './design.service';
+import {Project, ProjectService} from './design.service';
 
 export const PROJECTS: Project[] = [
   { id: 1, description: 'Разработка дизайна и эргономики нового седана', customer: 'Mercedes-Benz', price: 5000000 },

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Project } from '../design.service';
+import { Project, ProjectService } from '../design.service';
 import { PROJECTS } from '../mock-project-list';
 
 @Component({
@@ -8,10 +8,23 @@ import { PROJECTS } from '../mock-project-list';
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent {
-  projects: Project[] = PROJECTS;
+  projects: Project[] = [];
 
-  constructor() {}
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
+    this.getProjects();
+  }
+
+  getProjects(): void {
+    this.projectService.getAllProjects().subscribe(
+      (projects: Project[]) => {
+        this.projects = projects;
+        console.log(this.projects);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 }

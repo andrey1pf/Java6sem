@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DesignModule } from './design/design.module';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     DesignModule,
+    HttpClientModule
   ],
   exports: [RouterModule]
 })

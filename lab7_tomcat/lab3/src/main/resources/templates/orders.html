@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Design</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/orders.css}" rel="stylesheet" />
+</head>
+<body class="layout" onload="onLoadPage()">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Главная страница</a></li>
+          <li><a href="/page1">Наши заказчики</a></li>
+          <li><a href="/page2">Наши задания</a></li>
+          <li><a href="/page3">Наши работники</a></li>
+          <li><a href="/orders">Наши заказы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main orders-page title-regular-14">
+      <form id="orders-form" class="form orders-form" data-form="orders-form"></form>
+      <form id="all-orders-form" class="form"></form>
+      <div class="orders-page__result" id="orders-result"></div>
+    </main>
+
+    <script type="text/javascript" th:src="@{../js/pages/orders.js}"></script>
+    <script type="text/javascript" th:src="@{../js/static/data.js}"></script>
+    <script type="text/javascript" th:src="@{../js/form/form-generator.js}"></script>
+    <script type="text/javascript" th:src="@{../js/form/form-validation.js}"></script>
+    <script type="text/javascript" th:src="@{../js/table/table-generator.js}"></script>
+    <script type="text/javascript" th:src="@{../js/navigation/navigation.js}"></script>
+  </body>
+</html>

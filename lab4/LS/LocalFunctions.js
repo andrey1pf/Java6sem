@@ -27,8 +27,6 @@
             (function resetMainFrom() {
                 document.getElementById('main-form').reset();
             })();
-
-            console.log("hto")
         }
 
         getValue(){

@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PROJECTS} from '../mock-project-list';
-import {Project} from '../design.service';
+import {Project, ProjectService} from '../design.service';
+import {ProjectListComponent} from '../project-list/project-list.component'
 
 @Component({
   selector: 'app-project-center',
@@ -9,9 +10,10 @@ import {Project} from '../design.service';
   styleUrls: ['./project-center.component.css']
 })
 export class ProjectCenterComponent {
+  @ViewChild(ProjectListComponent) projectListComponent?: ProjectListComponent;
   projectForm: FormGroup | undefined;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private projectService: ProjectService) {
     this.createForm();
   }
 
@@ -27,12 +29,22 @@ export class ProjectCenterComponent {
 
   onSubmit() {
     const newProject: Project = {
-      id: PROJECTS.length + 1,
+      id: 0,
       description: this.projectForm?.value.description,
       customer: this.projectForm?.value.customer,
       price: this.projectForm?.value.price
     };
-    PROJECTS.push(newProject);
+    this.projectService.addProject(newProject).subscribe(
+      (project: Project) => {
+        console.log('Project added:', project);
+        if (this.projectListComponent){
+          this.projectListComponent!.getProjects();
+        }
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
     this.projectForm?.reset();
   }
 }
